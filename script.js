@@ -5,9 +5,6 @@ document.querySelector("#push").onclick = function () {
   } else {
     document.querySelector("#tasks").innerHTML += 
     `<div class="task">
-    <button class = "check">
-    <i id = checked class="far fa-circle"></i>
-    </button>
         <span id = "taskname">
             ${document.querySelector("#newtask input").value}
         </span>
@@ -29,7 +26,10 @@ document.querySelector("#push").onclick = function () {
       for(let i=0; i<tasks.length; i++){
         tasks[i].onclick = function(){
             this.classList.toggle('completed')
-            checked.setAttribute("class","fas fa-check-circle")                  
+            // checked.setAttribute("class","fas fa-check-circle")   
+            {/* <button class = "check">
+            <i id = checked class="far fa-circle"></i>
+            </button>  */}              
         }
       }
       document.querySelector('#newtask input').value = "";
