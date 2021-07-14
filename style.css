@@ -5,10 +5,11 @@
 }
 body{
     height: 100vh;
-    background: linear-gradient(to right, #000046, #1cb5e0);
+    background: linear-gradient(to right, #000046, #1cb5e0), rgba(0,0,0,0.4);
 }
 .container{
-    border: 2px solid white;
+    /* border: 2px solid white;
+    border-radius: 10px; */
     width: 40%;
     min-width: 450px;
     position: absolute;
@@ -20,7 +21,7 @@ body{
 #newtask {
     background-color: #ffffff;
     padding: 1.87rem 1.25rem;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 
 }
@@ -66,7 +67,7 @@ body{
 .task{
     background-color: #ffffff;
     height: 50px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -80,14 +81,20 @@ body{
     font-size: 15px;
     font-weight: 500;
 }
-.task button{
-    background-color: #65c7f7;
-    color: #ffffff;
+.delete ,.check{
+    background: none;
+    color: #65c7f7;
     height: 100%;
-    width: 40px;
-    border-radius: 5px;
+    width: 50px;
     border: none;
     cursor: pointer;
     outline: none;
-
 }
+
+.delete:hover{
+    color: red;
+}
+.completed {
+    text-decoration: line-through;
+}
+
