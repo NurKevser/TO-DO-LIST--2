@@ -5,6 +5,9 @@ document.querySelector("#push").onclick = function () {
   } else {
     document.querySelector("#tasks").innerHTML += 
     `<div class="task">
+    <button class = "check">
+            <i id="checked" class="far fa-circle"></i>
+            </button> 
         <span id = "taskname">
             ${document.querySelector("#newtask input").value}
         </span>
@@ -19,18 +22,16 @@ document.querySelector("#push").onclick = function () {
               this.parentNode.remove(); //deleting a task
           }
       }
-
-
-      const checked = document.getElementById("checked")
+      const complete = document.getElementsByClassName("far fa-circle");
+      console.log(complete);
+      
       const tasks = document.querySelectorAll(".task");
       for(let i=0; i<tasks.length; i++){
         tasks[i].onclick = function(){
-            this.classList.toggle('completed')
-            // checked.setAttribute("class","fas fa-check-circle")   
-            {/* <button class = "check">
-            <i id = checked class="far fa-circle"></i>
-            </button>  */}              
-        }
+            this.classList.toggle('completed')  
+            // <i class="fas fa-check-circle"></i> dolu check butonu
+
+          }
       }
       document.querySelector('#newtask input').value = "";
   }
