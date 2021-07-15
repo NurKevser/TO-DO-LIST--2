@@ -22,8 +22,8 @@ document.querySelector("#push").onclick = function () {
               this.parentNode.remove(); //deleting a task
           }
       }
-      const complete = document.getElementsByClassName("far fa-circle");
-      console.log(complete);
+      // const complete = document.getElementsByClassName("far fa-circle");
+      // console.log(complete);
       
       const tasks = document.querySelectorAll(".task");
       for(let i=0; i<tasks.length; i++){
